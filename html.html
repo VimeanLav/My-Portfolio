@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css.css">
+<title>My Portfolio</title>
+<style>
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        background: linear-gradient(to right, #a8edea, #fed6e3);
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        text-align: center;
+        padding: 40px 10px;
+        color: #004d4d;
+    }
+    header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+    }
+    nav {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    nav a {
+        color: #004d4d;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+    nav a:hover {
+        color: #ff6f61;
+    }
+    .hero {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        gap: 20px;
+    }
+    .photo {
+        flex: 1;
+        text-align: center;
+    }
+    .photo img {
+        width: 400px;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 10%;
+        border: 4px solid white;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    }
+    .glass-card {
+        flex: 1;
+        background: rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(10px);
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        max-width: 400px;
+    }
+    label {
+        display: block;
+        margin-top: 10px;
+        font-weight: 600;
+    }
+    input, select {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border-radius: 8px;
+        border: none;
+        outline: none;
+    }
+    input[type="radio"] {
+        width: auto;
+    }
+    .radio-group {
+        margin-top: 5px;
+    }
+    button {
+        width: 100%;
+        padding: 12px;
+        margin-top: 15px;
+        border: none;
+        border-radius: 8px;
+        background-color: #004d4d;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    button:hover {
+        background-color: #007777;
+    }
+    .skills-section {
+        padding: 40px 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    .skill-card {
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        width: 200px;
+        text-align: center;
+        transition: transform 0.3s;
+    }
+    .skill-card:hover {
+        transform: translateY(-5px);
+    }
+    .contact {
+        background-color: #004d4d;
+        color: white;
+        text-align: center;
+        padding: 30px;
+        margin-top: 30px;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>My Portfolio</h1>
+</header>
+
+<nav>
+    <a href="#form">Form</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div class="hero">
+    <div class="photo">
+        <img src="Vimean.Lav/Vimean.jpg" alt="My Photo">
+        <p>Hi, I'm Vimean Lav, a passionate web developer.<br>I study Computer Science at the Kirirom Institute of Technology majoring in software engineering.</p>
+    </div>
+    <div class="glass-card" id="form">
+        <h2>Personal Info</h2>
+        <form>
+            <label>First Name:</label>
+            <input type="text" name="fname">
+
+            <label>Last Name:</label>
+            <input type="text" name="lname">
+
+            <label>Email:</label>
+            <input type="email" name="email">
+
+            <label>Date of Birth:</label>
+            <input type="date" name="dob">
+
+            <label>Gender:</label>
+            <div class="radio-group">
+                <input type="radio" name="gender" value="Male"> Male
+                <input type="radio" name="gender" value="Female"> Female
+            </div>
+
+            <label>Country:</label>
+            <select name="country">
+                <option value="Cambodia">Cambodia</option>
+                <option value="Vietnam">Vietnam</option>
+                <option value="Laos">Laos</option>
+                <option value="Japan">Japan</option>
+                <option value="Korea">Korea</option>
+                <option value="United States Of America">United States Of America</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="China">China</option>
+                <option value="France">France</option>
+                <option value="India">India</option>
+                <option value="Spain">Spain</option>
+                <option value="Afghanistan">Afghanistan</option>
+                <option value="Pakistan">Pakistan</option>
+                <option value="Portugal">Portugal</option>
+                <option value="Thailand">Thailand</option>
+                <option value="Malaysia">Malaysia</option>
+                <option value="Singapore">Singapore</option>
+                <option value="Indonesia">Indonesia</option>
+                <option value="Philippines">Philippines</option>
+
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+<section class="skills-section" id="skills">
+    <div class="skill-card">
+        <h3>HTML & CSS</h3>
+        <p>Advanced</p>
+    </div>
+    <div class="skill-card">
+        <h3>JavaScript</h3>
+        <p>Intermediate</p>
+    </div>
+    <div class="skill-card">
+        <h3>Python</h3>
+        <p>Beginner</p>
+    </div>
+</section>
+
+<div class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: lav.vimean@kit.edu.kh</p>
+    <p>Phone: +855 98269152</p>
+    <p>Location: Phnom Penh, Cambodia</p>
+</div>
+
+</body>
+</html>
